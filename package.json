@@ -4,6 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "prepare": "panda codegen",
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
@@ -11,9 +12,13 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@radix-ui/themes": "^3.0.5",
     "@remix-run/node": "^2.9.1",
     "@remix-run/react": "^2.9.1",
     "@remix-run/serve": "^2.9.1",
+    "@tiptap/extension-placeholder": "^2.4.0",
+    "@tiptap/extension-text-align": "^2.4.0",
+    "@tiptap/extension-underline": "^2.4.0",
     "@tiptap/pm": "^2.3.2",
     "@tiptap/react": "^2.3.2",
     "@tiptap/starter-kit": "^2.3.2",
@@ -22,6 +27,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.39.1",
     "@remix-run/dev": "^2.9.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",

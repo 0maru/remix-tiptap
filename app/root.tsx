@@ -5,6 +5,16 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { LinksFunction } from "@remix-run/node";
+
+import radix from '@radix-ui/themes/styles.css?url';
+import styles from "./index.css?url";
+import { Theme } from "@radix-ui/themes";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: radix },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,9 +26,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <Theme>
+          {children}
         <ScrollRestoration />
         <Scripts />
+        </Theme>
       </body>
     </html>
   );
