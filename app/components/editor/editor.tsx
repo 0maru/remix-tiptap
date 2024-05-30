@@ -1,13 +1,11 @@
 import { Box } from "@radix-ui/themes"
 import Underline from "@tiptap/extension-underline"
-import { BubbleMenu, EditorContent, useEditor } from "@tiptap/react"
+import { BubbleMenu, Editor, EditorContent, useEditor } from "@tiptap/react"
 import StarterKit from "@tiptap/starter-kit"
 import { css } from "styled-system/css"
 
-const CustomeEditor = () => {
-  const editor = useEditor({
-    extensions: [StarterKit, Underline]
-  })
+const CustomeEditor = ({ editor }: { editor: Editor }) => {
+
 
   return (
     <Box>
