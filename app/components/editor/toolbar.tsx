@@ -1,6 +1,7 @@
 import {Editor} from "@tiptap/react"
 import {Button, ButtonProps} from "react-aria-components"
 import {IconBold, IconItalic, IconUnderline} from "@tabler/icons-react";
+import {css} from "styled-system/css";
 
 
 const Toolbar = ({editor}: { editor: Editor }) => {
@@ -23,7 +24,13 @@ const Toolbar = ({editor}: { editor: Editor }) => {
 
 const ToolbarIconButton = (props: ButtonProps) => {
   return (
-    <Button {...props}>
+    <Button
+      {...props}
+      className={css({
+        padding: '0.2rem',
+        margin: '0 0.2rem'
+      })
+      }>
       {props.children}
     </Button>
   )
