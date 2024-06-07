@@ -1,27 +1,31 @@
-import { FontBoldIcon, FontItalicIcon, HeadingIcon, TextNoneIcon } from "@radix-ui/react-icons"
-import { Button } from "@radix-ui/themes"
-import { Editor } from "@tiptap/react"
+import {Editor} from "@tiptap/react"
+import {Button, ButtonProps} from "react-aria-components"
+import {IconBold, IconItalic, IconUnderline} from "@tabler/icons-react";
 
-const Toolbar = ({ editor }: { editor: Editor }) => {
+
+const Toolbar = ({editor}: { editor: Editor }) => {
+  console.log(editor)
+
   return (
     <div>
-      <Button onClick={
-        () => {
-          editor.commands.setBold()
-        }
-      }>
-        <FontBoldIcon />
-      </Button>
-      <Button>
-        <FontItalicIcon />
-      </Button>
-      <Button>
-        <TextNoneIcon />
-      </Button>
-      <Button>
-        <HeadingIcon />
-      </Button>
+      <ToolbarIconButton onPress={editor.commands.setBold}>
+        <IconBold/>
+      </ToolbarIconButton>
+      <ToolbarIconButton onPress={editor.commands.setItalic}>
+        <IconItalic/>
+      </ToolbarIconButton>
+      <ToolbarIconButton onPress={editor.commands.setUnderline}>
+        <IconUnderline/>
+      </ToolbarIconButton>
     </div>
+  )
+}
+
+const ToolbarIconButton = (props: ButtonProps) => {
+  return (
+    <Button {...props}>
+      {props.children}
+    </Button>
   )
 }
 

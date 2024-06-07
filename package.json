@@ -12,11 +12,10 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@radix-ui/react-icons": "^1.3.0",
-    "@radix-ui/themes": "^3.0.5",
     "@remix-run/node": "^2.9.1",
     "@remix-run/react": "^2.9.1",
     "@remix-run/serve": "^2.9.1",
+    "@tabler/icons-react": "^3.5.0",
     "@tiptap/extension-bold": "^2.4.0",
     "@tiptap/extension-placeholder": "^2.4.0",
     "@tiptap/extension-text-align": "^2.4.0",
@@ -26,6 +25,7 @@
     "@tiptap/starter-kit": "^2.3.2",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
+    "react-aria-components": "^1.2.1",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

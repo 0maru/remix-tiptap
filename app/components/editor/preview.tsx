@@ -6,7 +6,9 @@ const EditorPreview = ({ editor }: { editor: Editor }) => {
     <div className={css({
       padding: "1rem"
     })}>
-      <p>HTML preview</p>
+      <p className={css({
+        fontSize: '2rem'
+      })}>HTML preview</p>
       <div dangerouslySetInnerHTML={{ __html: editor.getHTML() }}></div>
       <p>preview</p>
       <div>{editor.getHTML()}</div>
