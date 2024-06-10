@@ -18,6 +18,9 @@ const Toolbar = ({editor}: { editor: Editor }) => {
       <ToolbarIconButton onPress={editor.commands.setUnderline}>
         <IconUnderline/>
       </ToolbarIconButton>
+      <ToolbarIconButton onPress={editor.commands.setStrike}>
+        <IconUnderline/>
+      </ToolbarIconButton>
     </div>
   )
 }
